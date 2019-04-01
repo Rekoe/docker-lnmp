@@ -7,12 +7,6 @@ COPY ./source.list /etc/apk/repositories
 #RUN apk update && apk upgrade
 RUN apk update
 
-RUN apt-get update && apt-get install -y \
-    openssl \
-    git \
-    unzip \
-    vim
-
 #时区配置
 ENV TIMEZONE Asia/Shanghai
 RUN apk add tzdata git ansible openssh &&  ln -snf /usr/share/zoneinfo/$TIMEZONE /etc/localtime && echo $TIMEZONE > /etc/timezone
