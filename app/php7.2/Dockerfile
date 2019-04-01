@@ -1,4 +1,4 @@
-FROM php:7.2-fpm
+FROM php:7.2-rc-fpm-alpine
 MAINTAINER HelloMJW majinawei168@outlook.com
 
 #替换国内镜像
