@@ -4,8 +4,8 @@ MAINTAINER HelloMJW majinawei168@outlook.com
 #替换国内镜像
 COPY ./source.list /etc/apk/repositories
 
-#RUN apk update && apk upgrade
-RUN apk update
+RUN apk update && apk upgrade
+#RUN apk update
 
 #时区配置
 ENV TIMEZONE Asia/Shanghai
