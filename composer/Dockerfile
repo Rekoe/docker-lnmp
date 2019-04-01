@@ -55,7 +55,7 @@ RUN pecl install xdebug \
 
 RUN echo 'alias sf="php app/console"' >> ~/.bashrc \
 && echo 'alias sf3="php bin/console"' >> ~/.bashrc \
-&& echo 'alias sf3="php-fpm-admin"' >> ~/.bashrc
+&& echo "alias ll='ls $LS_OPTIONS -l'" >> ~/.bashrc
 
 WORKDIR /usr/share/nginx/html
 # Write Permission
