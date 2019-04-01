@@ -38,9 +38,9 @@ RUN composer global require "laravel/installer" \
 
 #ssh服务文件
 
-COPY ssh/ /tmp/
+#COPY ssh/ /tmp/
 
-RUN mv /tmp/ssh* /etc/ssh/ && chmod -R 400 /etc/ssh
+#RUN mv /tmp/ssh* /etc/ssh/ && chmod -R 400 /etc/ssh
 
 RUN pecl install xdebug \
 && docker-php-ext-enable xdebug \
