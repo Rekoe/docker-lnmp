@@ -14,12 +14,6 @@ RUN ln -snf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && echo ${TIMEZONE} >
 && printf '[PHP]\ndate.timezone = "%s"\n', ${TIMEZONE} > /usr/local/etc/php/conf.d/tzone.ini \
 && "date"
 
-RUN apk apt-get update && apt-get install -y \
-       git \
-       libfreetype6-dev \
-       libjpeg62-turbo-dev \
-       libpng-dev \
-       vim
        
 RUN docker-php-ext-install mbstring opcache pdo pdo_mysql mysqli
 RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turbo-dev gmp-dev && \
